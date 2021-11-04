@@ -1,4 +1,5 @@
 """Caclculation Abstract Class"""
+# pylint: disable=too-few-public-methods
 class Calculation:
     """Caclculation Abstract Class Definition"""
 

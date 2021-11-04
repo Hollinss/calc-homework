@@ -1,7 +1,11 @@
 """Testing the Calculator"""
-from calculator.main import Calculator
 import pprint
 import pytest
+from calculator.main import Calculator
+
+# pylint: disable=redefined-outer-name
+# pylint: disable=unused-argument
+
 
 @pytest.fixture
 def clear_history():
@@ -20,7 +24,7 @@ def test_clear_history(clear_history):
     """Testing the clearing function of history []"""
     assert Calculator.add_number(1, 2) == 3
     assert Calculator.add_number(2, 2) == 4
-    assert Calculator.clear_history() == True
+    assert Calculator.clear_history() is True
     assert Calculator.history_count() == 0
 
 def test_count_history(clear_history):
