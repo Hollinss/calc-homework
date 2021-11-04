@@ -1,4 +1,6 @@
 # Calculator Project Setup
+## Added Branch with Improvements 
+
 [![Build Status](https://app.travis-ci.com/Hollinss/calc2.svg?branch=main)](https://app.travis-ci.com/Hollinss/calc2)
 
 Run Pip Install

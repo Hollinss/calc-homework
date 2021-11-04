@@ -6,7 +6,7 @@ class Calculation:
         self.valueA = valueA
         self.valueB = valueB
 
-    # base class of class hierarchy
+    # base class of class hierarchy -> Class Factory Method
     @classmethod
     def create(cls, valueA, valueB):
         return cls(valueA, valueB)
