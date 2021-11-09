@@ -1,5 +1,5 @@
 # Calculator Project Setup
-[![Build Status](https://app.travis-ci.com/Hollinss/calc2.svg?branch=main)](https://app.travis-ci.com/Hollinss/calc2)
+[![Build Status](https://app.travis-ci.com/Hollinss/calc-homework.svg?branch=calc_part_4)](https://app.travis-ci.com/Hollinss/calc-homework)
 
 Run Pip Install
 pip install -r requirements.txt
