@@ -3,7 +3,7 @@ from calc_mod.calculations.addition import Addition
 from calc_mod.calculations.subtraction import Subtraction
 from calc_mod.calculations.multiplication import Multiplication
 from calc_mod.calculations.division import Division
-from calc_mod.calculations.calculation import Calculations
+from calc_mod.history.calculations import Calculations
 
 class Calculator:
     """This is the Calculator Class"""
