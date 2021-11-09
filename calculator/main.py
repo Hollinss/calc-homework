@@ -1,8 +1,8 @@
 """ This is the increment function"""
-from calc_mod.addition import Addition
-from calc_mod.subtraction import Subtraction
-from calc_mod.multiplication import Multiplication
-from calc_mod.division import Division
+from calc_mod.calculations.addition import Addition
+from calc_mod.calculations.subtraction import Subtraction
+from calc_mod.calculations.multiplication import Multiplication
+from calc_mod.calculations.division import Division
 
 class Calculator:
     """ This is the Calculator class"""
