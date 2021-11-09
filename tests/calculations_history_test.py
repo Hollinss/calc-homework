@@ -5,6 +5,7 @@ from calc_mod.calculations.multiplication import Multiplication
 
 # pylint: disable=redefined-outer-name
 # pylint: disable=unused-argument
+# pylint: disable=line-too-long
 
 @pytest.fixture
 def clear_history_fixture():
@@ -26,7 +27,7 @@ def test_clear_calculation_history(clear_history_fixture,setup_multiplication_ca
     assert Calculations.count_history() == 1
     Calculations.clear_history()
     assert Calculations.count_history() == 0
-    assert Calculations.clear_history() == True
+    assert Calculations.clear_history() is True
 
 def test_get_calculation(clear_history_fixture, setup_multiplication_calculation_fixture):
     """Testing getting a specific calculation out of the history"""
@@ -39,5 +40,3 @@ def test_get_calculation_last(clear_history_fixture, setup_multiplication_calcul
 def test_get_calculation_first(clear_history_fixture, setup_multiplication_calculation_fixture):
     """Testing getting the last calculation from the history"""
     assert Calculations.get_first_calculation().get_result() == 6
-
-

@@ -1,4 +1,7 @@
 """Mod Calculation Class"""
+
+# pylint: disable=too-few-public-methods
+
 class Calculation:
     """calculation abstract base class"""
     def __init__(self,values: tuple):

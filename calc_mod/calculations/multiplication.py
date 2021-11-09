@@ -1,5 +1,4 @@
 """Multiplication Class"""
-import pprint
 from calc_mod.calculations.calculation import Calculation
 
 class Multiplication(Calculation):

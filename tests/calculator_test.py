@@ -1,5 +1,4 @@
 """Testing the Calculator"""
-import pprint
 import pytest
 from calc_mod.calculator import Calculator
 from calc_mod.history.calculations import Calculations
