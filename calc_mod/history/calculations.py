@@ -22,7 +22,7 @@ class Calculations:
         return Calculations.history[0]
     @staticmethod
     def get_calculation(num):
-        """get a specific calculation from history"""
+        """get a specific calculation from history input index"""
         return Calculations.history[num]
     @staticmethod
     def add_calculation(calculation):

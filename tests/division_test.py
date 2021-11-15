@@ -6,3 +6,5 @@ def test_calculation_division():
     mynumbers = (2.0,1.0)
     division = Division(mynumbers)
     assert division.get_result() == 0.5
+
+#test for division by zero
