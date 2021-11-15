@@ -1,33 +1,30 @@
 """This is the increment function"""
-from calc_mod.calculations.addition import Addition
-from calc_mod.calculations.subtraction import Subtraction
-from calc_mod.calculations.multiplication import Multiplication
-from calc_mod.calculations.division import Division
 from calc_mod.history.calculations import Calculations
 
+
 class Calculator:
-    """This is the Calculator Class"""
+    """This is the Calculator Class which calls the Calculations class to perform calculator duties"""
+
     @staticmethod
-    def add_numbers(*args):
+    def add_numbers(values_assigned_to_tuple: tuple):
         """adds list of numbers"""
-        calculation = Addition(args)
-        Calculations.add_calculation(calculation)
-        return calculation.get_result()
+        Calculations.addition_calculation(values_assigned_to_tuple)
+        return True
+
     @staticmethod
-    def subtract_numbers(*args):
+    def subtract_numbers(values_assigned_to_tuple: tuple):
         """subtract list of numbers"""
-        calculation = Subtraction(args)
-        Calculations.add_calculation(calculation)
-        return calculation.get_result()
+        Calculations.subtraction_calculation(values_assigned_to_tuple)
+        return True
+
     @staticmethod
-    def multiply_numbers(*args):
+    def multiply_numbers(values_assigned_to_tuple: tuple):
         """multiplication numbers from result"""
-        calculation = Multiplication(args)
-        Calculations.add_calculation(calculation)
-        return calculation.get_result()
+        Calculations.multiplication_calculation(values_assigned_to_tuple)
+        return True
+
     @staticmethod
-    def divide_numbers(*args):
+    def divide_numbers(values_assigned_to_tuple: tuple):
         """divide numbers from result"""
-        calculation = Division(args)
-        Calculations.add_calculation(calculation)
-        return calculation.get_result()
+        Calculations.division_calculation(values_assigned_to_tuple)
+        return True

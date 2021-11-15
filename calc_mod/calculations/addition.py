@@ -1,5 +1,5 @@
 """Addition Class"""
-from calc_mod.calculations.calculation import Calculation
+from calc_mod.calculations.calculation import Calculation #Inheritance
 
 class Addition(Calculation):
     """calculation addition class"""
