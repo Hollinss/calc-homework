@@ -23,8 +23,13 @@ class Calculations:
 
     @staticmethod
     def get_last_calculation():
-        """gets latest calculation from user"""
+        """gets latest calculation from user as an object"""
         return Calculations.history[-1]
+
+    @staticmethod
+    def get_last_calculation_actual_value():
+        """gets latest calculation from user as an object"""
+        return Calculations.get_last_calculation().get_result()
 
     @staticmethod
     def get_first_calculation():

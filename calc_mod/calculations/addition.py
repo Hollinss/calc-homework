@@ -1,9 +1,11 @@
 """Addition Class"""
-from calc_mod.calculations.calculation import Calculation #Inheritance
+from calc_mod.calculations.calculation import Calculation  # Inheritance
+
 
 class Addition(Calculation):
     """calculation addition class"""
-    def get_result(self):
+
+    def get_result(self):  # Polymorphism
         """get addition results"""
         sum_of_values = 0.0
         for value in self.values:
