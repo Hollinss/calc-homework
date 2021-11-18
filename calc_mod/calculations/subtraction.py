@@ -1,8 +1,10 @@
 """Subtraction Class"""
 from calc_mod.calculations.calculation import Calculation
 
+
 class Subtraction(Calculation):
     """calculation subtraction class"""
+
     def get_result(self):
         """get subtraction results"""
         difference_of_values = 0.0

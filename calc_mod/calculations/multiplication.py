@@ -1,8 +1,10 @@
 """Multiplication Class"""
 from calc_mod.calculations.calculation import Calculation
 
+
 class Multiplication(Calculation):
     """calculation multiplication class"""
+
     def get_result(self):
         """get multiplication results"""
         multiplication_of_values = 1.0

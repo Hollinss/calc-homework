@@ -1,8 +1,10 @@
 """Division Class"""
 from calc_mod.calculations.calculation import Calculation
 
+
 class Division(Calculation):
     """calculation division class"""
+
     def get_result(self):
         """get division results"""
         division_of_values = 1.0

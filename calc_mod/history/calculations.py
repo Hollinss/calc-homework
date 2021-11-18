@@ -7,6 +7,7 @@ from calc_mod.calculations.division import Division
 
 class Calculations:
     """Class with fundamental methods to operate calculator"""
+    # command pattern
     history = []
 
     # pylint: disable=too-few-public-methods
