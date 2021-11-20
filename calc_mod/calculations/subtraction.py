@@ -9,5 +9,5 @@ class Subtraction(Calculation):
         """get subtraction results"""
         difference_of_values = 0.0
         for value in self.values:
-            difference_of_values = difference_of_values - value
+            difference_of_values = value - difference_of_values
         return difference_of_values
