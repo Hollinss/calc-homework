@@ -1,6 +1,5 @@
 """Mod Calculation Class"""
 
-
 # pylint: disable=too-few-public-methods
 
 class Calculation:  # Abstraction
