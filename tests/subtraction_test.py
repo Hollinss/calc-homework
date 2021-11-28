@@ -1,7 +1,11 @@
 """Testing Subtraction Functionality"""
+import pandas as pd
+
 from calc_mod.calculations.subtraction import Subtraction
 
-import pandas as pd
+from tests.absolute import absolutepath
+
+# pylint: disable=unused-variable
 
 def test_calculation_subtraction():
     """testing subtraction"""
@@ -11,7 +15,7 @@ def test_calculation_subtraction():
 
 def test_calculation_subtraction_csv():
     """testing addition"""
-    file = pd.read_csv('test_data/subtraction.csv')
+    file = pd.read_csv(absolutepath('tests/test_data/subtraction.csv'))
     for index, row in file.iterrows():
         #Arrange
         mynumbers = (row['value_1'], row['value_2'])
@@ -19,4 +23,3 @@ def test_calculation_subtraction_csv():
         subtraction = Subtraction(mynumbers)
         # Assert
         assert subtraction.get_result() == row['result']
-

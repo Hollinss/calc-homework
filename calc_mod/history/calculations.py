@@ -4,6 +4,7 @@ from calc_mod.calculations.subtraction import Subtraction
 from calc_mod.calculations.multiplication import Multiplication
 from calc_mod.calculations.division import Division
 
+# pylint: disable=line-too-long
 
 class Calculations:
     """Class with fundamental methods to operate calculator"""

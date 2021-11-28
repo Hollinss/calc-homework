@@ -24,7 +24,7 @@ def test_calculator_subtract_static(clear_history_fixture):
     """Subtraction Static Test"""
     inputted_tuple = (19.0, 5.0, 4.0)
     Calculator.subtract_numbers(inputted_tuple)
-    assert Calculations.get_last_calculation_actual_value() == -28.0
+    assert Calculations.get_last_calculation_actual_value() == 18.0
 
 
 def test_calculator_multiply_static(clear_history_fixture):
