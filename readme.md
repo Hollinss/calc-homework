@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 2. To run tests, Lint, and Coverage report use this command: pytest  --pylint --cov
 
-#Pylint Coverage Screenshots:
+# Pylint Coverage Screenshots:
 
 ![img.png](img.png)
 ![img_1.png](img_1.png)
