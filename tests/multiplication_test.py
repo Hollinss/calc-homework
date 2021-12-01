@@ -16,7 +16,7 @@ def test_calculation_multiplication():
 
 def test_calculation_multiplication_csv():
     """testing multiplication from imported csv"""
-    file = pd.read_csv(absolutepath('tests/test_data/multiplication.csv'))
+    file = pd.read_csv(absolutepath('input_test_data/multiplication.csv'))
     for index, row in file.iterrows():
         # Arrange
         mynumbers = (row['value_1'], row['value_2'])

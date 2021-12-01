@@ -15,7 +15,7 @@ def test_calculation_subtraction():
 
 def test_calculation_subtraction_csv():
     """testing addition"""
-    file = pd.read_csv(absolutepath('tests/test_data/subtraction.csv'))
+    file = pd.read_csv(absolutepath('input_test_data/subtraction.csv'))
     for index, row in file.iterrows():
         #Arrange
         mynumbers = (row['value_1'], row['value_2'])

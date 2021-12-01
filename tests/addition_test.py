@@ -18,7 +18,7 @@ def test_calculation_addition():
 
 def test_calculation_addition_csv():
     """testing addition"""
-    file = pd.read_csv(absolutepath('tests/test_data/addition.csv'))
+    file = pd.read_csv(absolutepath('input_test_data/addition.csv'))
     for index, row in file.iterrows():
         # Arrange
         mynumbers = (row['value_1'], row['value_2'])

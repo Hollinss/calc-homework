@@ -24,7 +24,7 @@ def test_division_by_zero():
 
 def test_calculation_division_csv():
     """testing multiplication from imported csv"""
-    file = pd.read_csv(absolutepath('tests/test_data/division.csv'))
+    file = pd.read_csv(absolutepath('input_test_data/division.csv'))
     for index, row in file.iterrows():
         #Arrange
         mynumbers = (row['value_1'], row['value_2'])
