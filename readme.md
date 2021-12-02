@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 # Pylint Coverage Screenshots:
 
-![img.png](img.png)
+![img.png](app/static/images/img.png)
 ![img_1.png](img_1.png)
 ![img_2.png](img_2.png)
 ![img_3.png](img_3.png)

@@ -1,7 +1,7 @@
 """This is the increment function"""
 # facade program
 from calc_mod.history.calculations import Calculations
-# pylint: disable=line-too-long tres
+# pylint: disable=line-too-long
 
 class Calculator:
     """This is the Calculator Class which calls the Calculations class to perform calculator duties"""
