@@ -3,6 +3,6 @@ import pandas as pd
 from writecsv import writecsv
 
 class Read():
-    def readcsv(filepath):
+    def readcsv(filepath, operation):
         file = pd.read_csv(filepath)
-        return writecsv(file)
+        return writecsv(file, operation)
