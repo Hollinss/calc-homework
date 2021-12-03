@@ -4,10 +4,15 @@ from calc_mod.calculations.addition import Addition
 from calc_mod.calculations.division import Division
 from calc_mod.calculations.multiplication import Multiplication
 from calc_mod.calculations.subtraction import Subtraction
+import time
+from datetime import datetime
+
+now = int(time.time())
+dt = datetime.fromtimestamp(now)
 
 
 def writecsv(df_from_read, operation):
-    df = pd.DataFrame(columns=['value_1', 'value_2', 'result', 'operation performed'])
+    df = pd.DataFrame(columns=['value_1', 'value_2', 'result', 'operation performed', 'UNIX Timestamp'])
 
     if operation == "addition":
         for index, row in df_from_read.iterrows():
@@ -16,7 +21,8 @@ def writecsv(df_from_read, operation):
             df = df.append({'value_1': row['value_1'],
                             'value_2': row['value_2'],
                             'result': addition.get_result(),
-                            'operation performed': operation},
+                            'operation performed': operation,
+                            'UNIX Timestamp': dt},
                            ignore_index=True)
 
     if operation == "division":
@@ -26,7 +32,8 @@ def writecsv(df_from_read, operation):
             df = df.append({'value_1': row['value_1'],
                             'value_2': row['value_2'],
                             'result': division.get_result(),
-                            'operation performed': operation},
+                            'operation performed': operation,
+                            'UNIX Timestamp': dt},
                            ignore_index=True)
 
     if operation == "multiplication":
@@ -36,7 +43,8 @@ def writecsv(df_from_read, operation):
             df = df.append({'value_1': row['value_1'],
                             'value_2': row['value_2'],
                             'result': multiplication.get_result(),
-                            'operation performed': operation},
+                            'operation performed': operation,
+                            'UNIX Timestamp': dt},
                            ignore_index=True)
 
     if operation == "subtraction":
@@ -46,7 +54,8 @@ def writecsv(df_from_read, operation):
             df = df.append({'value_1': row['value_1'],
                             'value_2': row['value_2'],
                             'result': subtraction.get_result(),
-                            'operation performed': operation},
+                            'operation performed': operation,
+                            'UNIX Timestamp': dt},
                            ignore_index=True)
 
     df.to_csv('output1.csv', mode='a', index=False, header=False)

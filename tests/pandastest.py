@@ -5,6 +5,7 @@ from tests.readcsv import Read
 from tests.absolute import absolutepath
 from tests.determine_operation import Operation
 
+
 addition_file = "input_test_data/addition.csv"
 division_file = "input_test_data/division.csv"
 multiplication_file = "input_test_data/multiplication.csv"
