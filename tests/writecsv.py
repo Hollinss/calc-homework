@@ -11,8 +11,8 @@ now = int(time.time())
 dt = datetime.fromtimestamp(now)
 
 
-def writecsv(df_from_read, operation):
-    df = pd.DataFrame(columns=['value_1', 'value_2', 'result', 'operation performed', 'UNIX Timestamp'])
+def writecsv(df_from_read, operation, filepath):
+    df = pd.DataFrame(columns=['value_1', 'value_2', 'result', 'operation performed', 'UNIX Timestamp', 'file path'])
 
     if operation == "addition":
         for index, row in df_from_read.iterrows():
@@ -22,7 +22,8 @@ def writecsv(df_from_read, operation):
                             'value_2': row['value_2'],
                             'result': addition.get_result(),
                             'operation performed': operation,
-                            'UNIX Timestamp': dt},
+                            'UNIX Timestamp': dt,
+                            'file path': filepath},
                            ignore_index=True)
 
     if operation == "division":
@@ -33,7 +34,8 @@ def writecsv(df_from_read, operation):
                             'value_2': row['value_2'],
                             'result': division.get_result(),
                             'operation performed': operation,
-                            'UNIX Timestamp': dt},
+                            'UNIX Timestamp': dt,
+                            'file path': filepath},
                            ignore_index=True)
 
     if operation == "multiplication":
@@ -44,7 +46,8 @@ def writecsv(df_from_read, operation):
                             'value_2': row['value_2'],
                             'result': multiplication.get_result(),
                             'operation performed': operation,
-                            'UNIX Timestamp': dt},
+                            'UNIX Timestamp': dt,
+                            'file path': filepath},
                            ignore_index=True)
 
     if operation == "subtraction":
@@ -55,7 +58,8 @@ def writecsv(df_from_read, operation):
                             'value_2': row['value_2'],
                             'result': subtraction.get_result(),
                             'operation performed': operation,
-                            'UNIX Timestamp': dt},
+                            'UNIX Timestamp': dt,
+                            'file path': filepath},
                            ignore_index=True)
 
     df.to_csv('output1.csv', mode='a', index=False, header=False)
