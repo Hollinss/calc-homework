@@ -1,17 +1,26 @@
 {% extends "base.html" %}
 {% block title %}Index{% endblock %}
-{% block head %}
-    {{ super() }}
-    <style type="text/css">
-        .important { color: green; }
-    </style>
-{% endblock %}
-{% block content %}
-    <h1>My Index</h1>
-    <p class="important">
-      Welcome to my homepage.
-        <img src="{{ url_for('static', filename='images/img.png') }}">
-    </p>
 
-<a href="/good/1.0/2.0">One Plus Two Good</a><br><a href="/bad/1/2">One Plus Two Bad</a>
+{% block content %}
+<head><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" /></head>
+  <div class="wrapper">
+    <div class="box content">
+
+        <div class = "herotext">
+        <h1> Welcome to the Calculator Program </h1>
+            <p> Created using Python and Flask </p>
+            <button class = "buttonclass" onclick="document.location='/calculator1'"> Start Here </button>
+        </div>
+
+    </div>
+    <div class="box footer">
+        <h1 style = "margin: 20px; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, quis.</h1>
+
+        <p style = "margin: 20px; ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At distinctio laudantium magnam natus nemo neque nostrum quaerat reprehenderit vel voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, quaerat?</p>
+
+    </div>
+</div>
+<br>
+<br>
+<!--<a href="/good/1.0/2.0">One Plus Two Good</a><br><a href="/bad/1/2">One Plus Two Bad</a>-->
 {% endblock %}

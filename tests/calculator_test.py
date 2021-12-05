@@ -16,26 +16,26 @@ def clear_history_fixture():
 def test_calculator_add_static(clear_history_fixture):
     """Addition Test"""
     inputted_tuple = (1.0, 1.0, 3.0)
-    Calculator.add_numbers(inputted_tuple)
+    Calculator.addition(inputted_tuple)
     assert Calculations.get_last_calculation_actual_value() == 5.0
 
 
 def test_calculator_subtract_static(clear_history_fixture):
     """Subtraction Static Test"""
     inputted_tuple = (19.0, 5.0, 4.0)
-    Calculator.subtract_numbers(inputted_tuple)
+    Calculator.subtraction(inputted_tuple)
     assert Calculations.get_last_calculation_actual_value() == 18.0
 
 
 def test_calculator_multiply_static(clear_history_fixture):
     """Multiplication Static Test"""
     inputted_tuple = (20.0, 1.0, 5.0)
-    Calculator.multiply_numbers(inputted_tuple)
+    Calculator.multiplication(inputted_tuple)
     assert Calculations.get_last_calculation_actual_value() == 100.0
 
 
 def test_calculator_divide_static(clear_history_fixture):
     """Divide Static Test"""
     inputted_tuple = (5.0, 50.0)
-    Calculator.divide_numbers(inputted_tuple)
+    Calculator.division(inputted_tuple)
     assert Calculations.get_last_calculation_actual_value() == 10.0

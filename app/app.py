@@ -1,11 +1,19 @@
 """A simple flask web app"""
 from flask import Flask, request
-from flask import render_template
-from calc_mod.calculator import Calculator
+from app.controllers.index_controller import IndexController
+from app.controllers.calculator_controller import CalcController
 app = Flask(__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
-@app.route("/")
-def index():
-    """index routing"""
-    return render_template('index.html')
+@app.route("/", methods=['GET'])
+def index_get():
+    """index routing to controller"""
+    return IndexController.get()
 
+@app.route("/calculator1", methods=['GET'])
+def calculator_get():
+    return CalcController.get()
+
+@app.route("/calculator1", methods=['POST'])
+def calculator_post():
+    return CalcController.post()

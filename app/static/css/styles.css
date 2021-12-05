@@ -1,0 +1,195 @@
+body {
+    margin: 40px;
+    font-family: Helvetica;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+    position: relative;
+}
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 200px 200px;
+    grid-template-areas:
+    "content content content"
+    "footer  footer  footer";
+    background-color: darkseagreen;
+    color: #444;
+    width: auto;
+    height: 84vh;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 0px;
+    padding: 0px;
+    font-size: 100%;
+}
+
+.header,
+.footer {
+    background-color: #999;
+}
+
+.content {
+    background-color: forestgreen;
+    background: url("hero.jpg") center center;
+    background-size: cover;
+    padding: 200px;
+}
+.herotext {
+    text-align: center;
+    background-color: darkslategrey;
+    border-radius: 20px;
+    color: white;
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+.buttonclass {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonclass:hover {
+    cursor: pointer;
+    background-color: darkkhaki;
+    color: black;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.topright {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bottomright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: burlywood;
+}
+
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: darkkhaki;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: cadetblue;
+    color: white;
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 10px 10px;
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+    .logo img {
+        max-width: 40px;
+        position: absolute;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        font-size: 10px;
+        background-color: forestgreen;
+        background: url("images/hero.jpg") center center;
+        background-size: cover;
+        padding: 50px;
+    }
+    .herotext {
+        font-size: 10px;
+        text-align: center;
+        background-color: darkslategrey;
+        border-radius: 20px;
+        color: white;
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: 200px 200px;
+        grid-template-areas:
+    "content content content"
+    "footer  footer  footer";
+        background-color: darkseagreen;
+        color: #444;
+        width: 250px;
+        height: 650px;
+    }
+
+    .box {
+        background-color: #444;
+        color: #fff;
+        border-radius: 0px;
+        padding: 0px;
+        font-size: 70%;
+    }
+
+    .header,
+    .footer {
+        background-color: #999;
+    }
+
+}
