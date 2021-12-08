@@ -2,13 +2,31 @@
 {% block title %}Index{% endblock %}
 
 {% block content %}
-
+<div class = "centered">
     <h1>My Calculator</h1>
-     {% if error %}
-         <div class="alert alert-danger error" role="alert">
-             {{ error }}
-        </div>
-      {% endif %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-danger alert-dismissible">
+             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+             {{ messages }}
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+<!--     {% if error %}-->
+<!--         <div class="alert alert-danger alert-dismissible">-->
+<!--             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
+<!--             {{ error }}-->
+<!--        </div>-->
+<!--      {% endif %}-->
+
+<!--    {% if errorzero %}-->
+<!--         <div class="alert alert-danger error alert-dismissible" role="alert">-->
+<!--             {{ error }}-->
+<!--        </div>-->
+<!--    {% endif %}-->
 
 
     <form action="/calculator1" method="POST">
@@ -17,7 +35,8 @@
         <label for="value2">Value 2:</label><br>
         <input type="text" id="value2" name="value2" value="2"><br>
         <fieldset>
-        <legend>Operation</legend>
+            <br>
+        <legend>Choose Operation:</legend>
           <div>
             <input type="radio" name="operation" id="addition" value="addition" checked>
             <label for="addition">addition</label>
@@ -38,5 +57,5 @@
 
         <input type="submit" value="Submit">
     </form>
-
+</div>
 {% endblock %}

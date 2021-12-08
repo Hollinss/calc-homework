@@ -39,3 +39,7 @@ def test_calculator_divide_static(clear_history_fixture):
     inputted_tuple = (5.0, 50.0)
     Calculator.division(inputted_tuple)
     assert Calculations.get_last_calculation_actual_value() == 10.0
+
+#fullpath = path+'/'+filenamae -> test/testdata/the actual file to read/write
+#in controller method, write each operation into a df and then to a csv file. Then you read that file and put it into a table which is then added to the caclulator1.html
+#in the history, add values to csv in addition to adding to history

@@ -7,7 +7,9 @@ class CalcController(BaseController):
     @staticmethod
     def post():
         if request.form['value1'] == '' or request.form['value2'] == '':
-            error = 'Please enter a value'
+            flash("Please enter a value")
+        elif request.form['value1'] == '0' and request.form['operation'] == 'division':
+            flash("Division by zero!")
         else:
             flash('Successful Calculation')
 
@@ -20,7 +22,7 @@ class CalcController(BaseController):
             getattr(Calculator, operation)(my_tuple)
             result = str(Calculations.get_last_calculation_actual_value())
             return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result)
-        return render_template('calculator1.html', error=error)
+        return render_template('calculator1.html')
     @staticmethod
     def get():
         return render_template('calculator1.html')

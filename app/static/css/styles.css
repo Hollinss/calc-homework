@@ -3,6 +3,16 @@ body {
     font-family: Helvetica;
 }
 
+.centered {
+    background-color: ghostwhite;
+    width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
 .sidebar {
     grid-area: sidebar;
 }
@@ -107,7 +117,7 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: burlywood;
+    background-color: black;
 }
 
 .topnav a {
