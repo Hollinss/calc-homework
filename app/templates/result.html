@@ -18,5 +18,25 @@
     <strong>Operation: </strong> {{ operation }} <br>
     <strong>Result: </strong> {{ result }} <br>
     <button onclick="document.location='/calculator1'"> Go back </button>
+
+    {% if data %}
+        <table>
+            {% for item in data %}
+                <!--- This will not work you have to think about it--->
+                <TR>
+<!--                    <TD class="c1"><IMG src="favicon.ico"></TD>-->
+                    <TD class="c1">{{ item.value1 }}</TD>
+<!--                    <TD class="c3">{{ item.id }}</TD>-->
+<!--                    <TD class="c4"><SPAN>{{ item.position }}</SPAN></TD>-->
+<!--                    <TD class="c5"><SPAN>{{ item.status }}</SPAN></TD>-->
+                </TR>
+            {% endfor %}
+        </table>
+        {% else %}
+	        <h1>There are no calculations</h1>
+    {% endif %}
+
 </div>
+
+
 {% endblock %}
