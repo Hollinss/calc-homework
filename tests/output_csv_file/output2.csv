@@ -4,3 +4,10 @@ value_1,value_2,result,operation performed
 2,21,23.0,addition
 3,89,29.666666666666668,division
 89,2,91.0,addition
+50,2,-48.0,subtraction
+89,2,178.0,multiplication
+2,24,12.0,division
+50,50,100.0,addition
+1,67,68.0,addition
+50,2,100.0,multiplication
+1,2,3.0,addition

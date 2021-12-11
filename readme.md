@@ -1,7 +1,9 @@
-# Calculator Project Branch 5
-## Added Branch with Improvements 
+# Calculator Project Branch 6
+## Added Branch with Improvements. Contains Link to YouTube walkthrough
 
 [![Build Status](https://app.travis-ci.com/Hollinss/calc-homework.svg?branch=calc_part_4)](https://app.travis-ci.com/Hollinss/calc-homework)
+
+[Link to 30 Second Walkthrough](https://youtu.be/v-MEuc1uhZQ)
 
 1. Run Pip Install
 pip install -r requirements.txt
