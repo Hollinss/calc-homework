@@ -20,3 +20,6 @@ pip install -r requirements.txt
 ![img_4.png](img_4.png)
 ![img_5.png](img_5.png)
 
+# Bootstrap Table Screenshot
+![img_6.png](img_6.png)
+
