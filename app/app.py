@@ -2,6 +2,7 @@
 from flask import Flask, request
 from app.controllers.index_controller import IndexController
 from app.controllers.calculator_controller import CalcController
+from app.controllers.result_controller import ResultController
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
@@ -9,6 +10,11 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 def index_get():
     """index routing to controller"""
     return IndexController.get()
+
+@app.route("/Results Table", methods=['GET'])
+def result_get():
+    """result page routing to controller"""
+    return ResultController.get()
 
 @app.route("/calculator1", methods=['GET'])
 def calculator_get():

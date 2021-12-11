@@ -3,6 +3,7 @@
 
 {% block content %}
 <div class = "centered">
+    <div style="padding: 10px">
     <h1>My Calculator</h1>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -14,20 +15,6 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-
-<!--     {% if error %}-->
-<!--         <div class="alert alert-danger alert-dismissible">-->
-<!--             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
-<!--             {{ error }}-->
-<!--        </div>-->
-<!--      {% endif %}-->
-
-<!--    {% if errorzero %}-->
-<!--         <div class="alert alert-danger error alert-dismissible" role="alert">-->
-<!--             {{ error }}-->
-<!--        </div>-->
-<!--    {% endif %}-->
-
 
     <form action="/calculator1" method="POST">
         <label for="value1">Value 1:</label><br>
@@ -57,5 +44,6 @@
 
         <input type="submit" value="Submit">
     </form>
+        </div>
 </div>
 {% endblock %}

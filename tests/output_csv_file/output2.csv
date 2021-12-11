@@ -1,15 +1,5 @@
 value_1,value_2,result,operation performed
-1,2,3.0,addition
-3,2,5.0,addition
-1,2,1.0,subtraction
-1,2,1.0,subtraction
-1,2,1.0,subtraction
-1,2,1.0,subtraction
-6,2,8.0,addition
 1,2,2.0,multiplication
-1,2,3.0,addition
-1,2,3.0,addition
-1,90,90.0,multiplication
-976,2,1952.0,multiplication
-1,2,3.0,addition
-1,2,3.0,addition
+1,2,2.0,division
+2,21,23.0,addition
+3,89,29.666666666666668,division
