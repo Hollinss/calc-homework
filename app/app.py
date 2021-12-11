@@ -3,6 +3,7 @@ from flask import Flask, request
 from app.controllers.index_controller import IndexController
 from app.controllers.calculator_controller import CalcController
 from app.controllers.result_controller import ResultController
+from app.controllers.ooppage_controller import OopPageController
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
@@ -15,6 +16,11 @@ def index_get():
 def result_get():
     """result page routing to controller"""
     return ResultController.get()
+
+@app.route("/calculatoroop", methods=['GET'])
+def ooppage_get():
+    """OOP page routing to controller"""
+    return OopPageController.get()
 
 @app.route("/calculator1", methods=['GET'])
 def calculator_get():

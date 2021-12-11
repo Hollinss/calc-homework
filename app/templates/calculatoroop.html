@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+
+{% block content %}
+<head><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" /></head>
+
+<div>
+    <h1 class = "header1">OOP in Calculator</h1>
+
+</div>
+
+<div class="parent">
+
+    <div class="div1">
+        <h3 class = "header3"><i>This page contains a walk-through of the calculator program in python and a study on how OOP Principles are exhibited in this program</i></h3>
+    </div>
+    <div class="div2" style = "background-color: white">
+        <br>
+        <h1 style = "margin-top: 0px; color: olivedrab;"> Creating the Calculations Class </h1>
+        <p>For the first step in designing our calculator program, we have to declare and design a class which handles all the calculation requests from our end user. This class will pre-process the data fed into our program to get them ready for our mathematical operations. <br>
+        <h3 style = "margin-top: 0px; "> Creating the Class Definition </h3>
+        <p> First, we have to declare a class called "calculations" in its own "calculations.py" file. The below gist is a demonstration:</p>
+            <script src="https://gist.github.com/Hollinss/98f70ee30beaf9ab70ca8ec2b458d6f8.js"></script>
+        <p>Here, we can see that the class has been created in python called "Calculation".</p>
+        <p>Next, we instantiate a constructor which creates an instance of the calculation class with necessary parameters. This class takes in two values and creates a calculation object with two values which will be called by other operations.</p>
+        <script src="https://gist.github.com/Hollinss/73ff1f58c9944a21388caca9a3002595.js"></script>
+        <p>In addition, there is a base create class method which uses the keyword <code>cls</code> which is called the constructor function. The <code>cls</code> keyword allows to access other methods and class attributes.</p>
+        <h3 style = "margin-top: 0px; "> Limitations </h3>
+        <p> As it stands, our calculations class can only take in two values. In order to account for a list of values, we have to redefine the constructor of the calculations.<br>
+            <script src="https://gist.github.com/Hollinss/85aca96ab7c1e8ff0f30e8f6f8b09b7e.js"></script>
+        <p> Here, the arguments passed into the constructor is a tuple of values rather than just two values. In addition, lines 18-24 is a <code>@staticmethod</code> which uses static variables that can be called without instantiating the class. A static method cannot call any other methods within the same class. In this class, the static method casts the list of numbers passed to the calculator to floats in line 23. It also converts the list of arguments to a tuple which is an immutable list of values.</p>
+        <h1 style = "margin-top: 0px; color: olivedrab;"> The Addition Class </h1>
+        <p> This class performs the addition calculation. It is a form of abstraction as it hides the complexity of the addition operation. The input is the tuple from the calculations class created earlier. The additions class <b>inherits </b>from the calculations class and sums up the values in the tuple.<br>
+            <script src="https://gist.github.com/Hollinss/6e4a604c1a13ab664d1666fa39c397eb.js"></script>
+        <p>The <code>get_result</code> method exhibits polymorphism since the user calls the same calculations class which outputs different results based on which specific calculations the user calls.</p>
+        <h1 style = "margin-top: 0px; color: olivedrab;"> The Subtraction Class </h1>
+        <p> Similar to the additions class, the subtractions class also exhibits polymorphism and accepts the same input from the calculations class. In line 2, we import the <code>Calculation</code> class. Lines 9-12, we loop through the tuple instantiated in the calculation class and add them to each other.<br>
+            <script src="https://gist.github.com/Hollinss/46cdd8fd448e0a07904f90c2b256eab5.js"></script>
+        <h1 style = "margin-top: 0px; color: olivedrab;"> The Multiplication Class </h1>
+        <p> Similar to the subtraction class, this class loops through the tuple and subtracts each value. <br>
+            <script src="https://gist.github.com/Hollinss/3a8dca67383c95f1da9bc0c6be5d4c9c.js"></script>
+        <h1 style = "margin-top: 0px; color: olivedrab;"> The Division Class </h1>
+        <p> Similar to the multiplication class, this class loops through the tuple and divides each value. In addition, when a division by zero occurs, the program will throw an exception error which is picked up by the pytests we will go through in the next section.<br>
+            <script src="https://gist.github.com/Hollinss/2733873ac8464007e4c69a2f00af0f57.js"></script>
+
+    <div class="div3" style = "background-color: white">
+
+        <h1 style = "margin-top: 0px; color: midnightblue;"> Inheritance In the Calculator Program </h1>
+        <p> Through inheritance, a hierarchy of classes is established where child classes inherit properties from paent classes. In our program, we practice inheritance through importing from other classes in the first lines of the program: <br>
+        <div style = "margin: 20px">
+        <code>
+            from calc_mod.calculations.calculation import Calculation <br>
+
+            class Division(Calculation):<br>
+        </code>
+        </div>
+        <p>Here, within the parentheses, the "Calculation" shows the inheritance in action. Now, we can access the constructor method within the calculations class which creates the base tuple. Without this practice, we would have to recycle code which proves to be tedious and difficult to debug. </p>
+
+        <h1 style = "margin-top: 0px; color: midnightblue;"> Polymorphism In the Calculator Program </h1>
+        <p> In short, polymorphism is the ability of an obect created in python to take many forms. While it is not self-evide nt in Python as it is in OOP languages such as Java, polymorphism is used all the time in designing programs. In our calculator, polymorphism occurs  <br>
+        <div style = "margin: 20px">
+            <code>
+                def get_result(self):<br>
+            </code>
+        </div>
+        <p>Here, the <code>get_result</code> method inherits from its parent, the calculation class by the <code>self</code> keyword.</p>
+
+        <h1 style = "margin-top: 0px; color: midnightblue;"> Abstraction In the Calculator Program </h1>
+        <p> In this section, we will go over the calculations.py class (notice the 's') to see how this class hides the complexity of the calculator program. This class handles the basic functionality of the calculator program. The first method we will look at is the <code>clear_history</code> method: <br>
+            <script src="https://gist.github.com/Hollinss/4ef4034995c25cae193cf02f65721f92.js"></script>
+        <p> Here, the calculations class creates an array called "history" which holds calculations that the users have already performed. For instance, when the user performs an addition calculation, it is added to the history and can be accessed at a later point in case the user wants to use those results again. When the user needs to clear all prior calculations, he can simply call the "clear_history" method within the calculations class to do so.</p>
+        <script src="https://gist.github.com/Hollinss/93c32c0da7b2027e055afd2fdf40790f.js"></script>
+        <p> The <code>def count_history():</code> method counts the amount of numbers already in the history array at any moment in time. The <code> def get_last_calculation():</code> get the last calculation performed in the history array. </p>
+        <p>The below method also inside the calculations class creates an addition calculation and adds it directly to the history array.</p>
+        <script src="https://gist.github.com/Hollinss/53bbc9e4f70505ca9caecec521b88c9a.js"></script>
+        <p>In this method, since it is a static method, it can call other methods from within the same class. To add the added numbers, the <code>add_calculation</code> method is called after the <code>Additions</code> class performs the addition calculation.</p>
+
+        <h1 style = "margin-top: 0px; color: midnightblue;"> Encapsulation In the Calculator Program </h1>
+        <p> Encapsulation is the mechanism of keeping the scope of variables and methods within the same class. Encapsulated methods and variables cannot be accessed by other classes. In python, we can instantiate a private variable by using two underscores in the variable declaration. However, in the calculator program, we do not need to use private variables. Below is an example of encapsulation in the calculation class. <br>
+            <script src="https://gist.github.com/Hollinss/a8d54836cf2508fed52987f274ea61fb.js"></script>
+        <p>Here, the <code> def convert_args_to_tuple_float(values):</code> method encapsulates the conversion of the inputted values to floats before passing it to the operation classes such as Addition, Subtraction etc.</p>
+
+    </div>
+</div>
+<br>
+<br>
+
+{% endblock %}
