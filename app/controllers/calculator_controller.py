@@ -25,19 +25,20 @@ class CalcController(BaseController):
             result = str(Calculations.get_last_calculation_actual_value())
             Calculations.create_dataframe_to_write(value1, value2, result, operation)
             df = Read.csvreader()
-            data = {
-                'value1': [],
-                'value2': [],
-                'result': [],
-                'operation': []
-            }
-            for index, row in df.iterrows():
-                data["value1"].append(row['value_1'])
-            #     # data["value2"].append(row['value_2'])
-            #     # data["result"].append(row['result'])
-            #     # data["operation"].append(row['operation performed'])
 
-            return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result, data=data)
+            # data = {
+            #     'value1': [],
+            #     'value2': [],
+            #     'result': [],
+            #     'operation': []
+            # }
+            # for index, row in df.iterrows():
+            #     data["value1"].append(row['value_1'])
+            # #     # data["value2"].append(row['value_2'])
+            # #     # data["result"].append(row['result'])
+            # #     # data["operation"].append(row['operation performed'])
+
+            return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result, tables=[df.to_html(classes='data')], titles=df.columns.values)
         return render_template('calculator1.html')
     @staticmethod
     def get():
