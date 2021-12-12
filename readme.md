@@ -5,6 +5,8 @@
 
 [Link to 30 Second Walkthrough](https://youtu.be/v-MEuc1uhZQ)
 
+[Link to 39 Second Walkthrough](https://youtu.be/xGLSzn1Kmfw)
+
 1. Run Pip Install
 pip install -r requirements.txt
 
