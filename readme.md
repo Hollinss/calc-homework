@@ -3,7 +3,7 @@
 
 [![Build Status](https://app.travis-ci.com/Hollinss/calc-homework.svg?branch=calc_part_4)](https://app.travis-ci.com/Hollinss/calc-homework)
 
-[Link to 30 Second Walkthrough](https://youtu.be/v-MEuc1uhZQ)
+[Link to 30 Second Walkthrough](https://youtu.be/qgGbT489o3Q)
 
 [Link to 39 Second Walkthrough](https://youtu.be/xGLSzn1Kmfw)
 
